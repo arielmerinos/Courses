@@ -11,3 +11,13 @@ Necesidades contextuales.
 
  - Requerimientos del proyecto
  (Obtener recursos para servidores/plataformas/desayunos...). Tener que tomar desiciones acerca del equipo (Tomando en cuenta las prioridades).
+
+*Dos tipos de requerimientos*
+- R. Funcionales
+ Necesidad de comunicarse, (Por ejemplo) con seguridad.
+
+
+- R. No Funcionales
+ (Como la seguridad, por ejemplo) Requerimientos más generales, como seguridad (e.g. todo contenido personal es privado y debe ser encriptado), darle prioridades de los requerimientos funcionales. Como que los datos estén en tiempo real (Necesitar ver algún dato, pero en tiempo real), se les da más importancia.
+
+ Uniendo ambos tipos de requerimientos de habla de requerimientos relevantes.
