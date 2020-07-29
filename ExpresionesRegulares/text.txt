@@ -10,6 +10,8 @@ url: https://www.instagram.com/p/BXB4zsUlW5Z/?taken-by=beco.mx
 url: http://instagram.com/p/blablablah
 url: http://itam.mx/test
 http://instagram.com/p/blablablah
+arielmerino@ciencias.unam.mx
+estoesunemail@gmail.com
 csv1,csv2,csv3,csv4,csv5
 Rodrigo JimÃ©nez GutiÃ©rrez
 5556581111
@@ -17,7 +19,7 @@ Rodrigo JimÃ©nez GutiÃ©rrez
 56.58.11.12
 302-345-9876
 55 21 06 43 33
-esto.es.un.mail+gmail@mail.com
+esto.es.un.ma22il+gmail@mail.com
 dominio.com
 [LOG ENTRY] [ERROR] The system is unstable
 [LOG ENTRY] [WARN] The system may be down
@@ -26,3 +28,11 @@ dominio.com
 [LOG ENTRY] [LOG] [user:@beco] Clicked here
 [LOG ENTRY] [LOG] [user:@beco] Rated the app
 [LOG ENTRY] [LOG] [user:@beco] Logged out
+
+
+RegEx para urls
+https?:\/\/[\w\-\.]+\.\w{2,5}\/?\S*
+
+
+regex para mails
+[\w\.\+]+@[\w\.\-]{3,}?\.\w{2,5}\.?\w*
