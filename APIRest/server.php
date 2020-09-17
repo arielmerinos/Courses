@@ -2,28 +2,34 @@
 
 
 //Como obtner el usuario y password para autenticar
-
-if(
-    !array_key_exists('HTTP_X_HASH', $_SERVER) ||
-    !array_key_exists('HTTP_X_TIMESTAMP', $_SERVER) ||
-    !array_key_exists('HTTP_X_UID', $_SERVER)
-){
+if(!array_key_exists('HTTP_X_TOKEN', $_SERVER)){
+    echo "Ujule desde el principio estamos mal";
     die;
 }
 
-list($hash, $uid, $timestamp) = [
-    $_SERVER['HTTP_X_HASH'],
-    $_SERVER['HTTP_X_UID'],
-    $_SERVER['HTTP_X_TIMESTAMP']
-];
+$url = 'htttp://localhost:8001';
+$ch = curl_init( $url);
+curl_setopt(
+    $ch,
+    CURLOPT_HTTPHEADER,
+    [
+        "X-Token: {$_SERVER['HTTP_X_TOKEN']}"
+    ]
+);
+curl_setopt(
 
-$secret = 'men are trash';
-$newHash = sha1($uid.$timestamp.$secret);
+    $ch,
+    CURLOPT_RETURNTRANSFER,
+    true
+);
+$ret = curl_exec($ch);
 
-if($newHash !== $hash){
+if($ret == 'true'){
+    echo "No pudo ser autenticado";
     die;
-
 }
+
+
 
 // Definiendo los recursos disponibles
 $allowedResourceTypes = [
