@@ -1,0 +1,15 @@
+<?php 
+
+switch(strtoupper($_SERVER['REQUEST_METHOD])){
+
+    case 'GET':
+        break;
+
+    case 'POST':
+        break;
+
+    case 'POST':
+        break;
+    case 'DELETE':
+        break;
+}
