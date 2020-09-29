@@ -1,0 +1,69 @@
+\documentclass[20pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amssymb, amsmath}
+\usepackage{stackengine}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{dsfont}
+\usepackage[margin=2.9cm,
+vmargin={1.5cm,0.7cm},
+includefoot]{geometry}
+\usepackage{setspace}
+\usepackage{subcaption}
+\usepackage{tocloft}
+\usepackage{upgreek}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{paralist}
+
+\renewcommand{\d}{\partial}
+
+\providecommand{\abs}[1]{\left|#1\right|}
+\providecommand{\norm}[1]{\left|\left|#1\right|\right|}														  
+\providecommand{\pint}[1]{\langle#1\rangle}														  
+\newcommand{\V}{\mathds{V}}
+
+\newcommand{\W}{\mathds{W}}
+
+\newcommand{\F}{\mathds{F}}
+
+\newcommand{\tq}{ \quad \cdot  \backepsilon \cdot \quad }
+
+\newcommand{\ld}{\lim\limits_{x \to 0^{+}}}
+
+\newcommand{\li}{\lim\limits_{x \to 0^{-}}}
+
+\newcommand{\la}{\lim\limits_{x \to a}}
+
+\renewcommand{\l}{\ell}
+\newcommand{\+}{\oslash}
+\renewcommand{\*}{\diamond}
+
+\newcommand{\R}{\mathds{R}}
+
+\newcommand{\Po}{\mathds{P}_2(\mathds{R})}
+
+
+\newtheorem{theorem}{Teorema}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definición}
+
+
+\begin{document}
+	
+	3. En $ \R^n $ definimos las operaciones $ u\+ v = u - v$, $ \lambda \* v = -\lambda v $, donde $ u,v \in \R^n $, $ \lambda \in \R $
+	¿Qué axiomas de espacio vectorial se cumplen para $ (\R, \+, \*) $? 
+	
+	\begin{enumerate}
+		\item Sean $ u,v,w \in \R^n $
+		\begin{align*}
+			(u \+ v) \+ w &= ((u_1, \dots, u_n) \+ (v_1, \dots, v_n)) \+ (w_1, \dots, w_n) &&\text{Definición porque están en }\R^n\\
+			(u \+ v) \+ w &= (u_1 - v_1, \dots, u_n -\\
+			 v_n) + (w_1, \dots, w_n) &&\text{Definición porque están en }\R^n\\
+		\end{align*}
+		\item $ \exists 0_\R \in \R $ tal que $ v \+ 0_\R = 0_\R \+ v = v $
+	\end{enumerate}
+
+
+\end{document}
