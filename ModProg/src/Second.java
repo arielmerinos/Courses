@@ -1,5 +1,3 @@
-import org.omg.PortableInterceptor.INACTIVE;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -10,52 +8,52 @@ public class Second {
 
         BufferedReader lector =  new BufferedReader( new InputStreamReader(System.in));
         String primeraLinea;
+        String[] dimensiones;
+
         while ((primeraLinea = lector.readLine()) != null && !primeraLinea.equals("0 0 0")){
-            StringTokenizer tokensPrimeraLinea = new StringTokenizer(primeraLinea);
-            int ancho = Integer.parseInt(tokensPrimeraLinea.nextToken());
-            int largo = Integer.parseInt(tokensPrimeraLinea.nextToken());
-            int costoMataPlagas = Integer.parseInt(tokensPrimeraLinea.nextToken());
+            dimensiones = primeraLinea.split(" ");
+            int ancho = Integer.parseInt(dimensiones[0]);
+            int largo = Integer.parseInt(dimensiones[1]);
+            int costoMataPlagas = Integer.parseInt(dimensiones[2]);
 
             int[][] cancha = new int[ancho][largo];
 
             int consultas = Integer.parseInt(lector.readLine());
-            StringTokenizer consulta;
+            String[] consulta;
+            int inicioX;
+            int inicioY;
+            int finX;
+            int finY;
+            int diferenciaX;
+            int diferenciaY;
             for (int i = 0; i < consultas; i++) {
-                consulta = new StringTokenizer(lector.readLine());
-
-                String identificador = consulta.nextToken();
-                if (identificador.equals("A")){
-                    int plaga = Integer.parseInt(consulta.nextToken());
-                    int ubicacionX = Integer.parseInt(consulta.nextToken());
-                    int ubicacionY = Integer.parseInt(consulta.nextToken());
+                consulta = lector.readLine().split(" ");
+                if (consulta[0].equals("A")){
+                    int plaga = Integer.parseInt(consulta[1]);
+                    int ubicacionX = Integer.parseInt(consulta[2]);
+                    int ubicacionY = Integer.parseInt(consulta[3]);
                     cancha[ubicacionX][ubicacionY] += plaga;
 
                 } else{
-                    int inicioX = Integer.parseInt(consulta.nextToken());
-                    int inicioY = Integer.parseInt(consulta.nextToken());
-                    int finX = Integer.parseInt(consulta.nextToken());
-                    int finY = Integer.parseInt(consulta.nextToken());
-                    System.out.println("Aquí inicia: " + inicioX +" " + inicioY + ": "+cancha[inicioX][inicioY]);
-                    System.out.println("Aquí termina: "+ finX + " " + finY + ": " +  cancha[finX][finY]);
-                    int diferenciaX = Math.abs(finX - inicioX);
-                    int diferenciaY = Math.abs(finY - inicioY);
+                    inicioX = Integer.parseInt(consulta[1]);
+                    inicioY = Integer.parseInt(consulta[2]);
+                    finX = Integer.parseInt(consulta[3]);
+                    finY = Integer.parseInt(consulta[4]);
+                    diferenciaX = Math.abs(finX - inicioX);
+                    diferenciaY = Math.abs(finY - inicioY);
                     int costoEnTotal = 0;
-                    int minimoX = Math.min(inicioX, finX);
-                    int minimoY = Math.min(inicioY, finY);
-                    System.out.println("la diferencia en X es: " + diferenciaX);
-                    System.out.println("la diferencia en Y es: " + diferenciaY);
+                    int minimoX = inicioX < finX ? inicioX: finX;
+                    int minimoY = inicioY < finY ? inicioY: finY;
                     for (int j = 0; j <= diferenciaX; j++) {
                         for (int k = 0; k <= diferenciaY ; k++) {
-                            System.out.println(cancha[j + minimoX][k + minimoY]);
                             costoEnTotal += cancha[j + minimoX][k + minimoY];
                         }
                     }
                     costoEnTotal *= costoMataPlagas;
-                    System.out.println("El costo en esta consulta es de: " +costoEnTotal);
+                    System.out.println(costoEnTotal);
                 }
 
             }
-
 
         }
 
