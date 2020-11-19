@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    position: absolute;
+    margin: 0 auto;
+    width: 70%;
+}
+
+.container__title{
+    background-color: darkslategray;
+    border-radius: 20px;
+    width: 50%;
+    color: gold;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    justify-self: center;
+
+}
+
+
+.container__quote{
+    margin-left: 0px;
+    margin-top: 0px;
+    top: 39px;
+    background-color: peachpuff;
+    border-radius: 25px;
+    padding: 10px;
+    color: black;
+    height: 250px;
+    width: 80%;
+    margin: auto;
+    top: 50px;
+    position: relative;
+}
+
+.container__quote ul{
+
+}
+.container__quote li{
+    display: table-cell;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}

@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    font-family: sans-serif;
+    color: purple;
+    margin-top: 10px;
+}
+
+
+.title{
+    font-size: 18;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.nav{
+    margin-top: 10px;
+    list-style: none;
+    padding-left: 0;
+}
+
+.nav li{
+    display: inline-block;
+}
+.nav a{
+    color: white;
+    background-color: gray;
+    text-decoration: none;
+    border-radius: 15px;
+    padding: 10px;
+}
+.nav .blog{
+    background-color: red ;
+}
+.blog:hover{
+    background-color: inherit;
+}

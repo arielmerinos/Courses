@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especificidad</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="page__header">
+        <!-- Ojo, los id son únicos, las clases son genéricas, no podemos tener el 
+        mismo id en dos elementos distintis -->
+        <h1 id="page__title" class="title" >Enterprise</h1>
+        <nav>
+            <ul id="main__nav" class="nav">
+                <li> <a href="">Home</a></li>
+                <li> <a href="">Cursos</a></li>
+                <li> <a href="">Instrucciones</a></li>
+                <li> <a href="" class="blog">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

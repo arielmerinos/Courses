@@ -1,0 +1,10 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* Sólo va a afectar a los parrafos cuyos padres directos sean un div */
+div p{
+    color: purple;
+}
+

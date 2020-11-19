@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+}
+.container{
+    border: 0.3rem solid black;
+    display: flex;
+    flex-wrap: wrap;
+    /* Para alinearlo verticalmente  */
+    /* Baseline se encarga de alinear los elementos al minimo de su contenido  */
+
+
+
+    /* Esto hace que siempre se vea la mitad de la pantalla */
+}
+
+.box{
+    width: 10rem;
+    height: 10rem;
+    flex-basis: 10rem;
+    flex-grow: 1;
+}
+
+.box1{
+    background-color: peachpuff;
+}
+.box2{
+    background-color: peru;
+}
+.box3{
+    background-color: peachpuff;
+}
+.box4{
+    background-color: gray;
+}
+.box5{
+    background-color: black;
+}
+.box6{
+    background-color: rosybrown;
+}

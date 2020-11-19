@@ -1,0 +1,18 @@
+
+/* 
+ok
+*/
+p{
+    color: rebeccapurple;
+    font-size: 40px;
+}
+/* Clase */
+.parrafo{
+    color: rosybrown;
+}
+
+/* Id */
+
+#texto{
+    color: yellow;
+}
