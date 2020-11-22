@@ -1,0 +1,12 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    display: grid;
+    grid-template-columns: 15% 20% 45% 20%;
+}
+.item{
+    background-color: bisque;
+    padding: 10px;
+    border: brown 1px solid;
+}
