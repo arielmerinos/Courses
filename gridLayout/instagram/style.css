@@ -7,7 +7,6 @@
 .post{
     cursor: pointer;
     position: relative;
-    width: 200px;
     display: block;
 }
 
@@ -24,6 +23,7 @@
     position: absolute;
     left: 0;
     right: 0;
+    top: 0;
     bottom: 0;
     display: none;
     align-items: center;
@@ -32,4 +32,24 @@
 }
 .post:hover .post-overlay{
     display: flex;
+}
+
+.post-likes, .post-comments{
+    width: 80px;
+    margin: 5px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+}
+.post-list{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 293px));
+    justify-content: center;
+    gap: 28px;
+}
+
+@media screen and (max-width: 600px){
+    .post-list{
+        gap: 3px;
+    }
 }
