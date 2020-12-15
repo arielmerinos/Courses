@@ -39,9 +39,16 @@ Todas las respuestas son correctas
 
 ** - ¿Desde dónde empieza la evolución en la implementación del flujo moderno?
 La implementación personal
+Todas las respuestas son correctas.
+
 
 - Cuál de las siguientes afirmaciones es verdadera respecto a una mayor frecuencia de colaboración:
 Ayuda a mejorar la calidad del código
 
 ** - ¿Desde dónde empieza la evolución en la implementación del flujo moderno?
+
 No es la de 18
+
+
+¿En cuántos pasos reduce el flujo moderno integrado el proceso de desarrollo de software?
+de 20  6 pasos
