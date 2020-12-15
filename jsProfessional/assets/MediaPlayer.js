@@ -25,10 +25,20 @@ MediaPlayer.prototype.togglePlay = function(){
         this.pause();
     }
 }
+
+
 MediaPlayer.prototype.mute = function(){
     this.media.muted = true;
 };
 MediaPlayer.prototype.unmute = function(){
     this.media.muted = false;
 };
+
+MediaPlayer.prototype.toggleAudio = function(){
+    if (this.media.muted) {
+        this.unmute();
+      } else {
+        this.mute();
+      }
+}
 export default MediaPlayer;

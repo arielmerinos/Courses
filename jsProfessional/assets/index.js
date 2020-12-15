@@ -8,10 +8,4 @@ const playButton = document.querySelector('#playButton')
 playButton.onclick = () => player.togglePlay();
 
 const muteButton = document.querySelector('#muteButton');
-muteButton.onclick = () => {
-  if (player.media.muted) {
-    player.unmute();
-  } else {
-    player.mute();
-  }
-};
+muteButton.onclick = () => player.toggleAudio();
