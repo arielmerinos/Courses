@@ -9,8 +9,31 @@
 
     <script>
       // Un objeto común y corriente
+      const drWho = {
+          name: 'Doctor Who'
+      }
+
+      drWho.saludar = function(){
+          console.log(`Hola pinche putita, te pones [..] mi nombre es ${this.name}`)
+      }
+      drWho.saludar()
 
       // Seamos un poco más eficientes
+
+      function Hero(name){
+          const hero ={
+              name: name
+          }
+
+          hero.saludar = function(){
+              console.log(`Mi nombres es ${this.name}`)
+          }
+
+          return hero;
+      }
+
+      const docWho = Hero("Dr. Who")
+      docWho.saludar()
 
       // const link = Hero('Link');
 
